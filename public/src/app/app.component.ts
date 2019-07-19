@@ -10,7 +10,7 @@ EditAuthorComponent
 })
 export class AppComponent implements OnInit{
   title = 'Favorite Authors';
-  authors: any = {};
+  
 
   constructor(private _httpService: HttpService){}
 
@@ -18,13 +18,6 @@ export class AppComponent implements OnInit{
     
   }
 
-  allAuthors() {
-    let observable = this._httpService.getAuthors();
-    observable.subscribe(data => {
-      console.log('all authors: ',data)
-      this.authors = data;
-    })
-  }
 
 }
 

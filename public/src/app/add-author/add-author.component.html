@@ -3,7 +3,10 @@
     <a href="">Home</a>
     <h3>Add a new author:</h3>
     <div>
-        <label for="name" id="name">Name: <input type="text" name="name" id="name"></label>
-        <button class="btn btn-danger">Cancel</button> <button class="btn btn-success">Submit</button>
+        <form (submit)="addAuthor()">
+
+            <label for="name" id="name">Name: <input type="text" name="name" id="name" [(ngModel)] = "newAuthor.name"> </label>
+            <button class="btn btn-danger">Cancel</button> <button type="submit" class="btn btn-success">Submit</button>
+        </form>
     </div>
 </body>
