@@ -2,7 +2,9 @@
         <a href="">Home</a>
         <h3>Edit Author:</h3>
         <div>
-            <label for="name" id="name">Name: <input type="text" name="name" id="name"></label>
-            <button class="btn btn-danger">Cancel</button> <button class="btn btn-primary">Edit</button>
+            <form (submit)="editAuthor()">
+                <label for="name" id="name">Name: <input type="text" placeholder="{{author.name}}" name="updatedAuthor.name" [(ngModel)]="updatedAuthor.name" ></label>
+                <button class="btn btn-danger">Cancel</button> <button type="submit" class="btn btn-primary">Edit</button>
+            </form>
         </div>
     </body>

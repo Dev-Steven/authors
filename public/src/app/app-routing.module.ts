@@ -8,7 +8,7 @@ const routes: Routes = [
 
   {path: 'all', component: AllAuthorsComponent},
   { path: 'add', component: AddAuthorComponent},
-  { path: 'edit', component: EditAuthorComponent},
+  { path: 'edit/:id', component: EditAuthorComponent},
   //{ path: 'gamma/:id', component: GammaComponent },
 
   { path: '', pathMatch: 'full', redirectTo: '/all' },

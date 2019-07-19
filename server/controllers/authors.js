@@ -11,12 +11,26 @@ module.exports = {
         .catch(err => res.json(err));
     },
 
+    getAuthor: function(req, res) {
+        console.log('In authors');
+        Author.findById(req.params.id)
+        .then(data => res.json(data))
+        .catch(err => res.json(err));
+    },
+
     addAuthor: (req, res) => {
         console.log('In authors')
         Author.create(req.body)
             .then(data => res.json(data))
             .catch(err => res.json(err));
       },
+
+    editAuthor: (req, res) => {
+        console.log('In authors', req.params.id);
+        Author.findByIdAndUpdate(req.params.id, req.body)
+        .then(data => res.json(data))
+        .catch(err => res.json(err));
+    },
 
     deleteAuthor: (req, res) => {
         console.log('In authors. ID:', req.params.id);

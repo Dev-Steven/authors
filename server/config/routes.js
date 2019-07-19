@@ -8,6 +8,12 @@ module.exports = function(app) {
         authors.getAuthors(req, res);
     }),
 
+    // Find a specific author
+    app.get('/authors/find/:id', function(req, res) {
+        console.log('In routes');
+        authors.getAuthor(req, res);
+    })
+
     // add author
     app.post('/authors/new', function(req, res) {
         console.log('In routes');
@@ -15,6 +21,10 @@ module.exports = function(app) {
     })
 
     // edit author
+    app.put('/authors/update/:id', function(req, res) {
+        console.log('In routes', req.params.id);
+        authors.editAuthor(req, res);
+    })
 
     //delete author
     app.delete('/authors/delete/:id', function(req, res) {
