@@ -4,12 +4,12 @@ const Author = mongoose.model('Author');
 
 module.exports = {
 
-    // getCakes: function(req, res){
-    //     console.log('get all in cakes')
-    //     Cake.find({})
-    //     .then(data => res.json(data))
-    //     .catch(err => res.json(err));
-    // },
+    getAuthors: function(req, res){
+        console.log('IN authors')
+        Author.find({})
+        .then(data => res.json(data))
+        .catch(err => res.json(err));
+    },
 
     // getCake: (req, res) => {
     //     console.log('get one in cakes')

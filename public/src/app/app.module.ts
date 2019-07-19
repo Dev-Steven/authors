@@ -6,10 +6,16 @@ import { HttpService } from './http.service';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AddAuthorComponent } from './add-author/add-author.component';
+import { EditAuthorComponent } from './edit-author/edit-author.component';
+import { AllAuthorsComponent } from './all-authors/all-authors.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    AddAuthorComponent,
+    EditAuthorComponent,
+    AllAuthorsComponent,
   ],
   imports: [
     BrowserModule,

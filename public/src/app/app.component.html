@@ -3,24 +3,10 @@
 
   <div>
     <h1>{{title}}</h1>
-    <a href="">Add an Author</a>
-    <h3>We have Quotes by:</h3>
+
+    <a [routerLink]="['/all']"></a>
+
   </div>
-  
-  <table class="table table-striped">
-    <thead>
-      <tr>
-        <th scope="col">Author</th>
-        <th scope="col">Action</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">(Name)</th>
-        <td><button class="btn btn-primary">Edit</button><button class="btn btn-danger">Delete</button></td>
-      </tr>
-    </tbody>
-  </table>
   
   <router-outlet></router-outlet>
 </body>
